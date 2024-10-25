@@ -195,7 +195,7 @@ function crearElementoCuenta(usuarios) {
 
         // Se muestra lo que ha pagado el usuario y su saldo (si debe o le deben)
         if (diferencia < 0) {
-            textoTarjeta.textContent = `${usuario.nombre} ha pagado ${totalPagadoPorUsuario}€, debe ${(diferencia).toFixed(2)} €`;
+            textoTarjeta.textContent = `${usuario.nombre} ha pagado ${totalPagadoPorUsuario}€, debe ${Math.abs((diferencia)).toFixed(2)} €`;
         } else if (diferencia > 0) {
             textoTarjeta.textContent = `${usuario.nombre} ha pagado ${totalPagadoPorUsuario}€, se le debe ${(diferencia).toFixed(2)} €`;
         } else {
